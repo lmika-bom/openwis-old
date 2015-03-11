@@ -153,7 +153,9 @@ public abstract class ArquillianDBTestCase extends DatabaseTestCase {
       File urnTestFile = getCachedFile(metadataId, date);
       logger.info("Create the test URN file {}", urnTestFile);
       try {
-         urnTestFile.createNewFile();
+         if (! urnTestFile.createNewFile()) {
+            throw new RuntimeException("Could not create file " + urnTestFile + ".  Do the directories exist?");
+         }
          CacheIndex cacheIndex = getCachedIndex();
          //         CacheIndex cacheIndex = MockCacheIndex.getCacheIndex();
          if (cacheIndex != null) {

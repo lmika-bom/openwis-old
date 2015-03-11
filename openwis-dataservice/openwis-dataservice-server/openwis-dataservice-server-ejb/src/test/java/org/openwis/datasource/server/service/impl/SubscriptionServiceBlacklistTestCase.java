@@ -36,7 +36,6 @@ import org.slf4j.LoggerFactory;
  * Explanation goes here. <P>
  */
 @RunWith(Arquillian.class)
-@Ignore
 public class SubscriptionServiceBlacklistTestCase extends ArquillianDBTestCase {
 
    /** The logger. */
