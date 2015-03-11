@@ -53,6 +53,7 @@ import org.openwis.dataservice.common.service.ProcessedRequestService;
 import org.openwis.dataservice.common.service.ProductMetadataService;
 import org.openwis.dataservice.common.service.SubscriptionService;
 import org.openwis.dataservice.common.util.DateTimeUtils;
+import org.openwis.dataservice.useralarms.UserAlarmManagerLocal;
 import org.openwis.datasource.server.ArquillianDBTestCase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -62,7 +63,6 @@ import org.slf4j.LoggerFactory;
  * Explanation goes here. <P>
  */
 @RunWith(Arquillian.class)
-@Ignore
 public class SubscriptionServiceImplTestCase extends ArquillianDBTestCase {
 
    /** Comment for <code>EXPECTED_EXCEPTION</code>. @member: EXPECTED_EXCEPTION */
@@ -111,6 +111,9 @@ public class SubscriptionServiceImplTestCase extends ArquillianDBTestCase {
    /** The blacklist service. */
    @EJB
    private BlacklistService blacklistService;
+   
+   @EJB
+   private UserAlarmManagerLocal userAlarmManager;
 
    /**
     * {@inheritDoc}

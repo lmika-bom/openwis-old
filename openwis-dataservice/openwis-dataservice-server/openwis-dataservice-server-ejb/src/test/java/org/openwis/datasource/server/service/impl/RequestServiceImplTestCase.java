@@ -37,7 +37,6 @@ import org.slf4j.LoggerFactory;
  * Explanation goes here. <P>
  */
 @RunWith(Arquillian.class)
-@Ignore
 public class RequestServiceImplTestCase extends ArquillianDBTestCase {
 
    /** The Constant EXPECTED_EXCEPTION. */
