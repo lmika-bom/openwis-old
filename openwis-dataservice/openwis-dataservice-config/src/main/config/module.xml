@@ -14,6 +14,5 @@
 		<module name="javax.api"/>
 		<module name="org.apache.commons.lang"/>
 		<module name="org.apache.commons.io"/>
-<!-- 		<module name="org.apache.commons.configuration"/> -->
 	</dependencies>
 </module>
