@@ -16,6 +16,13 @@
 	   		<outputDirectory>org/openwis/dataservice/config/main</outputDirectory>    			
    		</fileSet>
    	</fileSets>
+   	<dependencySets>
+   	    <dependencySet>
+   	        <outputDirectory>org/openwis/dataservice/config/main</outputDirectory>
+   	        <useProjectArtifact>false</useProjectArtifact>
+   	        <scope>runtime</scope>
+   	    </dependencySet>
+   	</dependencySets>
     <files>
     	<file>
     		<source>src/main/config/module.xml</source>

@@ -3,11 +3,17 @@
 	<resources>
 		<resource-root path="."/>
 		<resource-root path="openwis-dataservice-config.jar"/>
+		<resource-root path="commons-collections-3.2.1.jar"/>
+		<resource-root path="commons-logging-1.1.1.jar"/>
+		<resource-root path="commons-beanutils-1.7.0.jar"/>
+		<resource-root path="commons-digester-1.8.jar"/>
+		<resource-root path="commons-configuration-1.6.jar"/>
+		<resource-root path="commons-beanutils-core-1.8.0.jar"/>
 	</resources>
 	<dependencies>
 		<module name="javax.api"/>
 		<module name="org.apache.commons.lang"/>
 		<module name="org.apache.commons.io"/>
-		<module name="org.apache.commons.configuration"/>
+<!-- 		<module name="org.apache.commons.configuration"/> -->
 	</dependencies>
 </module>

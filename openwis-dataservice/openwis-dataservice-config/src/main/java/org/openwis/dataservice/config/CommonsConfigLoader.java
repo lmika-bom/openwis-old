@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
 
-import javax.security.auth.login.Configuration;
-
 import org.apache.commons.configuration.ConfigurationConverter;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
@@ -19,7 +17,6 @@ public class CommonsConfigLoader implements ConfigLoader {
    
    @Override
    public Properties loadConfig(URL url) throws IOException {
-
       try {
          PropertiesConfiguration config = new PropertiesConfiguration();
          setupInterpolator(config.getInterpolator());
@@ -30,6 +27,15 @@ public class CommonsConfigLoader implements ConfigLoader {
       } catch (ConfigurationException e) {
          throw new IOException("Failed to load configuration from resource: " + url.toString(), e);
       }
+//      InputStream inStream = url.openStream();
+//      
+//      try {
+//         Properties prop = new Properties();
+//         prop.load(inStream);
+//         return prop;
+//      } finally {
+//         IOUtils.closeQuietly(inStream);              
+//      }
    }
 
    /**
